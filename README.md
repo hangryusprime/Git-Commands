@@ -68,7 +68,7 @@ _Forked from [@joshnh «A list of my commonly used Git commands»](https://githu
 | `git merge [source branch] [target branch]` | Merge a branch into a target branch |
 | `git stash` | Stash changes in a dirty working directory |
 | `git stash clear` | Remove all stashed entries |
-| `git revert [commit ID] | Revert current commit |
+| `git revert [commit ID]` | Revert current commit |
 
 ### Sharing & Updating Projects
 
