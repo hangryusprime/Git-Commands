@@ -56,6 +56,7 @@ _Forked from [@joshnh «A list of my commonly used Git commands»](https://githu
 | `git branch` | List branches (the asterisk denotes the current branch) |
 | `git branch -a` | List all branches (local and remote) |
 | `git branch [branch name]` | Create a new branch |
+| `git push --set-upstream origin [branch]` | Push created branch |
 | `git branch -f branch-name [new-tip-commit_ID]` | Move branch pointer to new/different commit |
 | `git branch -d [branch name]` | Delete a branch |
 | `git push origin --delete [branchName]` | Delete a remote branch |
