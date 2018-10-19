@@ -70,6 +70,8 @@ _Forked from [@joshnh «A list of my commonly used Git commands»](https://githu
 | `git stash` | Stash changes in a dirty working directory |
 | `git stash clear` | Remove all stashed entries |
 | `git revert [commit ID]` | Revert current commit |
+| `git clean -n` | List all untracked files that are to be deleted |
+| `git clean -f` | Delete all untracked files. Additional arguments: `-d` for directories, `-X` for ignored files, `-x` for ignored and non-ignored files. Can be combined with `-f`. Usage: `git clean -fd`, `git clean -fX` and `git clean -fx` |
 
 ### Sharing & Updating Projects
 
