@@ -73,6 +73,17 @@ _Forked from [@joshnh «A list of my commonly used Git commands»](https://githu
 | `git clean -n` | List all untracked files that are to be deleted |
 | `git clean -f` | Delete all untracked files. Additional arguments: `-d` for directories, `-X` for ignored files, `-x` for ignored and non-ignored files. Can be combined with `-f`. Usage: `git clean -fd`, `git clean -fX` and `git clean -fx` |
 
+### Branch management
+
+Deleting stale/unused local git branches.
+
+| Command | Description |
+| ------- | ----------- |
+| `git remote prune origin` | Deletes all stale remote-tracking branches. These stale branches have already been removed from the remote repository, but are still locally available in `remotes/` |
+| `git branch -vv \| grep 'origin/.*: gone]'` | Filter git branches down to those with deleted `upstream/remote` counterparts |
+| `git branch -vv \| grep 'origin/.*: gone]' \| awk '{print $1}'` | Picks branch names from the above filtered list |
+| `git branch -vv \| grep 'origin/.*: gone]' \| awk '{print $1}' \| xargs git branch -d` | Delete the branched listed |
+
 ### Sharing & Updating Projects
 
 | Command | Description |
