@@ -49,7 +49,7 @@ _Forked from [@joshnh «A list of my commonly used Git commands»](https://githu
 | `git commit -m "[commit message]"` | Commit changes |
 | `git rm -r [file-name.txt]` | Remove a file (or folder) |
 
-### Branching & Merging
+### Branching
 
 | Command | Description |
 | ------- | ----------- |
@@ -65,13 +65,35 @@ _Forked from [@joshnh «A list of my commonly used Git commands»](https://githu
 | `git checkout [branch name]` | Switch to a branch |
 | `git checkout -` | Switch to the branch last checked out |
 | `git checkout -- [file-name.txt]` | Discard changes to a file |
-| `git merge [branch name]` | Merge a branch into the active branch |
-| `git merge [source branch] [target branch]` | Merge a branch into a target branch |
 | `git stash` | Stash changes in a dirty working directory |
 | `git stash clear` | Remove all stashed entries |
 | `git revert [commit ID]` | Revert current commit |
+| `git reset --hard` | Discard all local changes to all files permanently |
 | `git clean -n` | List all untracked files that are to be deleted |
 | `git clean -f` | Delete all untracked files. Additional arguments: `-d` for directories, `-X` for ignored files, `-x` for ignored and non-ignored files. Can be combined with `-f`. Usage: `git clean -fd`, `git clean -fX` and `git clean -fx` |
+
+### Merging, Rebasing & Cherry Picking
+
+| Command | Description |
+| ------- | ----------- |
+| `git merge [branch name]` | Merge a branch into the active branch |
+| `git merge [source branch] [target branch]` | Merge a branch into a target branch |
+| `git rebase [branch name]` | Change the base of your branch to what's current in [branch name] |
+| `git rebase --continue` | Continues rebase after resolving conflicts |
+| `git rebase --abort` | Aborts the current rebase |
+| `git cherry-pick -x [commit hash]` | Choose a commit from one branch and apply it onto current one. |
+
+### Tagging
+
+| Command | Description |
+| ------- | ----------- |
+| `git tag` | View tags |
+| `git tag -a [tag_name] -m [tag_desc]` | Add a tag to current head |
+| `git tag -l` | List out all the tags |
+| `git show [tag_name]` | Get tag - triggered - date - author - commit hash - desc |
+| `git push origin [tag_name]` | Push tag into origin master |
+| `git tag -d [tag_name]` | Delete tag |
+| `git push origin --delete [tag_name]` | Delete tag in remote repository |
 
 ### Branch management
 
@@ -105,8 +127,9 @@ Deleting stale/unused local git branches.
 
 | Command | Description |
 | ------- | ----------- |
-| `git log` | View changes |
-| `git log --summary` | View changes (detailed) |
+| `git log` | View commit logs |
+| `git log --oneline` | View commit logs (single lines) |
+| `git log --summary` | View commit logs (detailed) |
 | `git diff [source branch] [target branch}` | Preview changes before merging |
 
 ### README syntax
