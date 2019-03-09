@@ -130,7 +130,7 @@ Deleting stale/unused local git branches.
 | `git log` | View commit logs |
 | `git log --oneline` | View commit logs (single lines) |
 | `git log --summary` | View commit logs (detailed) |
-| `git diff [source branch] [target branch}` | Preview changes before merging |
+| `git diff [source branch] [target branch]` | Preview changes before merging |
 
 ### README syntax
 
